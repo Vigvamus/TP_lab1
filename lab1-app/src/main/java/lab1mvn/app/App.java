@@ -5,6 +5,6 @@ package lab1mvn.app;
  */
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello confict");
+        System.out.println("Hello confict World! It's a mixed version");
     }
 }
