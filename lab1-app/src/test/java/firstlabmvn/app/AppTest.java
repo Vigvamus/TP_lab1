@@ -1,4 +1,4 @@
-package lab1mvn.app;
+package firstlabmvn.app;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

@@ -1,13 +1,15 @@
-package lab1mvn.app;
+package firstlabmvn.app;
 
 public class Owner {
-    /** owner personal id */
+    /** owner personal id. */
     private final String personId;
-    /** owner full name */
+    /** owner full name. */
     private final String fullName;
+    /** Contact - unused vraiable to check pmd and stylecheck. */
+    private String PhoneNumber;
 
     /**
-     * Owner constructor
+     * Owner constructor.
      * @param inputFullName owner full name
      * @param inputPersonId owner personal id
      * */

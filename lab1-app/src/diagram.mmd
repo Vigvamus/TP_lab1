@@ -1,0 +1,29 @@
+classDiagram
+    class App {
+        +main(String[] args)$
+    }
+    class Car {
+        -String numberVIN
+        -Engine engineEntity
+        -Owner carOwner
+        +Car(Engine stockEngine, Owner firstOwner, String inputNumberVIN)
+        +swapEngine(Engine customEngine) Engine
+        +changeOwner(final Owner newOwner) void
+        +toString() String
+    }
+    class Engine {
+        -String engineNumber
+        -int prevCheckupMileage
+        -int engineVolume
+        +Engine(String inputEngineNumber, int inputPrevCheckupMileage, int inputEngineVolume)
+        +updateCheckup(int currentMileage) void
+    }
+    class Owner {
+        -String fullName
+        +Owner(String inputFullName, String inputPersonId)
+        +getName() String
+    }
+
+    Car --> Engine : has
+    Car --> Owner : has
+    App --> Car : creates

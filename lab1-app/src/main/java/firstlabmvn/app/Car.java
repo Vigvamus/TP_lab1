@@ -1,23 +1,27 @@
-package lab1mvn.app;
+package firstlabmvn.app;
 
 
 public class Car {
-    /** car engine */
+    /** car engine. */
     private Engine engineEntity;
-    /** car owner */
+    /** car owner. */
     private Owner carOwner;
-    /** car VIN number */
+    /** car VIN number. */
     private final String numberVIN;
-    /// convenient and usefull name of a Car object
+    /** convenient and usefull name of a Car object. */
     private String friendlyName;
 
     /**
-     * Car constructor
+     * Car constructor.
      * @param firstOwner initial car owner
      * @param stockEngine initial car engine
      * @param inputNumberVIN initial and final car VIN number
      * */
-    public Car(final Engine stockEngine, final Owner firstOwner, final String inputNumberVIN) {
+    public Car(
+            final Engine stockEngine,
+            final Owner firstOwner,
+            final String inputNumberVIN
+    ) {
         this.engineEntity = stockEngine;
         this.carOwner = firstOwner;
         this.numberVIN = inputNumberVIN;
@@ -25,7 +29,7 @@ public class Car {
     }
 
     /**
-     * Swap engine
+     * Swap engine.
      * @param customEngine new engine to attach in a car
      * @return previous engine, installed in a car
      * */
@@ -36,24 +40,24 @@ public class Car {
     }
 
     /**
-     * change car owner
+     * change car owner.
      * @param newOwner new car owner
      * */
     public void changeOwner(final Owner newOwner) {
         this.carOwner = newOwner;
     }
 
-    /** @return car engine */
+    /** @return car engine. */
     public Engine getEngineEntity() {
         return engineEntity;
     }
 
-    /** @return car owner */
+    /** @return car owner. */
     public Owner getCarOwner() {
         return carOwner;
     }
 
-    /** @return car VIN number */
+    /** @return car VIN number. */
     public String getNumberVIN() {
         return numberVIN;
     }
@@ -72,5 +76,16 @@ public class Car {
      */
     public void setFriendlyName(final String inputFriendlyName) {
         this.friendlyName = inputFriendlyName;
+    }
+
+    /**
+     * Simple toString convertion.
+     * @return String representation
+     * */
+    public String toString() {
+        return "-- Car: " + this.friendlyName + " --\n"
+                + "VIN: " + this.numberVIN + "\n"
+                + "Owner: " + this.carOwner.getFullName() + "\n"
+                + "Engine: " + this.engineEntity.getEngineNumber();
     }
 }
